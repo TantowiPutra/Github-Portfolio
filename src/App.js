@@ -1,10 +1,12 @@
 import './App.css';
-import Example from './components/navbar.js'
+import Navbar from './components/Navbar.js'
+import AboutMe from './components/AboutMe.js';
 
 function App() {
   return (
     <div>
-        <Example />
+        <Navbar />
+        <AboutMe />
     </div>
   );
 }
