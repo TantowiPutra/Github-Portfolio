@@ -1,13 +1,13 @@
 import './App.css';
-import Navbar from './components/Navbar.js'
-import AboutMe from './components/AboutMe.js'
-import Footer from './components/Footer.js'
+import Navbar from './components/layout/Navbar.js'
+import Content from './components/layout/Content.js';
+import Footer from './components/layout/Footer.js'
 
 function App() {
   return (
-    <div className='w-8/12 flex flex-col items-center'>
+    <div className='grid grid-cols-1'>
         <Navbar />
-        <AboutMe />
+        <Content />
         <Footer />
     </div>
   );

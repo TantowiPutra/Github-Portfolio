@@ -1,10 +1,12 @@
+import Content from '../components/common/Container'
+
 const AboutMe = () => {
     return (
-        <div className="container text-white h-[500px] flex flex-col items-center">
+        <Content>
             <h1 className="text-xl mt-3 border-b-4 border-white p-3 w-fit">
                 "About Me"
             </h1> 
-            <div className="content mt-4 text-justify overflow-y-scroll p-5 h-3/4 scrollbar-thin scrollbar-webkit">
+            <div className="content mt-4 w-1/2 text-justify overflow-y-scroll p-5 crollbar-thin scrollbar-webkit">
                 <div className="first-paragprah mb-3">
                     (14/05/2024) Hi, My name is <b>Tantowi Putra Agung Setiawan</b>, a recent Computer Science graduate from Bina Nusantara University. I finally (not officialy yet)
                     got my Bachelor degree in Computer Science after 3.5 years. As a freshmen, i found it really difficult to undersand algorithmic ways of thinking as i don't have any
@@ -35,7 +37,7 @@ const AboutMe = () => {
                     PS: I really am sorry if there are several grammar error that's bugging you. Tbh i'm still learning to communicate in english properly. Therefore, please don't judge me &#128517; 
                 </div>
             </div>
-        </div>
+        </Content>
     )
 }
 
