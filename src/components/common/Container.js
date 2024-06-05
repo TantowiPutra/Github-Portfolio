@@ -1,9 +1,9 @@
-const Content = ({ children }) => {
+const Container = ({ children }) => {
     return (
-        <div className="container text-white h-[600px] flex flex-col items-center">
+        <div className="container text-white flex flex-col items-center justify-center">
             {children}
         </div>
     );
 }
 
-export default Content;
+export default Container;

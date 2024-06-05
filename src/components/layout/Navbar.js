@@ -1,22 +1,39 @@
-import { Fragment } from 'react'
+import { useState } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-
-const navigation = [
-  { name: 'About Me', href: 'about-me', current: true },
-  { name: 'Projects', href: 'projects', current: false },
-  { name: 'Contact Me', href: 'contact-me', current: false },
-]
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee, faUser, faMobile } from '@fortawesome/free-solid-svg-icons';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+  const [navList, setState] = useState([
+    { name: 'About Me',   icon:<FontAwesomeIcon icon={faUser}/>  , href: 'about-me', current: true },
+    { name: 'Projects',   icon:<FontAwesomeIcon icon={faCoffee}/>  , href: 'projects', current: false },
+    { name: 'Contact Me', icon:<FontAwesomeIcon icon={faMobile}/>  , href: 'contact-me', current: false },
+  ]);
+
+  function checkNavigation(event) {
+    event.preventDefault()
+    const currentHref = event.currentTarget.getAttribute('href');
+    
+    const newNavList = navList.map((item) => {
+      return {
+        ...item,
+        current: item.href === currentHref
+      };
+    });
+
+    setState(newNavList)
+  } 
+
+
   return (
     <Disclosure as="nav">
       {({ open }) => (
-        <>
+        <span>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -34,8 +51,9 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch">
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {navList.map((item) => (
                       <a
+                        onClick={checkNavigation}
                         key={item.name}
                         href={item.href}
                         className={classNames(
@@ -44,7 +62,7 @@ export default function Navbar() {
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
-                        {item.name}
+                        {item.icon} {item.name}
                       </a>
                     ))}
                   </div>
@@ -53,10 +71,12 @@ export default function Navbar() {
             </div>
           </div>
 
+          {/* Menu When List < Small Size */}
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
+              {navList.map((item) => (
                 <Disclosure.Button
+                  onClick={checkNavigation}
                   key={item.name}
                   as="a"
                   href={item.href}
@@ -71,7 +91,7 @@ export default function Navbar() {
               ))}
             </div>
           </Disclosure.Panel>
-        </>
+        </span>
       )}
     </Disclosure>
   )

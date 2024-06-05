@@ -1,20 +1,22 @@
-import AboutMe from "../../pages/AboutMe"
+import AboutMe from "../../sections/AboutMe"
 
 const navigation = [
-    { name: 'About Me', href: '#about-me', current: true, component: <AboutMe />},
-    { name: 'Projects', href: '#projects', current: false },
-    { name: 'Contact Me', href: '#contact-me', current: false },
+    { id: 1, name: 'About Me', href: '#about-me', current: true, component: <AboutMe />},
+    { id: 2, name: 'Projects', href: '#projects', current: false },
+    { id: 3, name: 'Contact Me', href: '#contact-me', current: false },
 ]
 
 const Content = () => {
     return (
-        <div>
+        <span>
             {
                 navigation.map((item) => (
-                    item.current ? item.component : ''
+                    <span key={item.id} className="flex flex-col justify-center items-center">
+                        {item.current ? item.component : ''}
+                    </span>
                 ))
             }
-        </div>
+        </span>
     )
 }
 
