@@ -8,15 +8,15 @@ const navigation = [
 
 const Content = () => {
     return (
-        <span>
+        <div className="h-100">
             {
                 navigation.map((item) => (
-                    <span key={item.id} className="flex flex-col justify-center items-center">
+                    <div key={item.id} className="flex flex-col h-1/2 items-center">
                         {item.current ? item.component : ''}
-                    </span>
+                    </div>
                 ))
             }
-        </span>
+        </div>
     )
 }
 

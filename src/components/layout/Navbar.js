@@ -86,7 +86,7 @@ export default function Navbar() {
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
-                  {item.name}
+                  {item.icon} &nbsp; {item.name}
                 </Disclosure.Button>
               ))}
             </div>

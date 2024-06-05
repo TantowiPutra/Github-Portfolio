@@ -21,7 +21,7 @@ const AboutMe = () => {
                     <Cursor/>
                 </span>
             </Heading>
-            <div className="content mt-4 w-3/4 h-[500px] text-justify overflow-y-scroll p-5 scrollbar-thin scrollbar-webkit">
+            <div className="content mt-4 w-3/4 h-3/4 text-justify overflow-y-auto p-5 scrollbar-thin scrollbar-webkit">
                 {
                     AboutMeData.map((data) => (
                         <Paragprah> 
