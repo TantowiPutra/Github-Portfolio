@@ -6,7 +6,7 @@ import AboutMeData from '../data/AboutMeData'
 
 const AboutMe = () => {
     const [text] = useTypewriter({
-        words: ['Developer', 'Gamer', 'Student'],
+        words: ['DEVELOPER', 'GAMER', 'STUDENT'],
         loop: {},
     })
 
@@ -24,7 +24,7 @@ const AboutMe = () => {
             <div className="content mt-4 w-3/4 h-3/4 text-justify overflow-y-auto p-5 scrollbar-thin scrollbar-webkit">
                 {
                     AboutMeData.map((data) => (
-                        <Paragprah> 
+                        <Paragprah key={data.id}> 
                             {data.text}
                         </Paragprah>
                     ))

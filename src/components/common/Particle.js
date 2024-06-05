@@ -5,7 +5,7 @@ import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSli
 
 function Particle() {
     const particlesInit = useCallback(async engine => {
-        console.log(engine);
+        // console.log(engine); 
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
         // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
         // starting from v2 you can add only the features you need reducing the bundle size
@@ -14,7 +14,7 @@ function Particle() {
     }, []);
 
     const particlesLoaded = useCallback(async container => {
-        await console.log(container);
+        // await console.log(container); 
     }, []);
 
     return (
@@ -61,13 +61,17 @@ function Particle() {
                         value: "#ffffff",
                         opacity: 1,
                     },
-                    radial: {
+                    links: {
                         color: "#ffffff",
                         distance: 150,
                         enable: true,
-                        opacity: 0.5,
+                        opacity: 0.1,
                         width: 1,
                     },
+                    shape: {
+                        type: ['circle'],
+                    },
+
                     move: {
                         direction: "none",
                         enable: true,
@@ -86,13 +90,10 @@ function Particle() {
                         value: 80,
                     },
                     opacity: {
-                        value: 0.1,
-                    },
-                    shape: {
-                        type: "circle",
+                        value: 0.2,
                     },
                     size: {
-                        value: { min: 1, max: 5 },
+                        value: { min: 1, max: 6 },
                     },
                 },
                 detectRetina: true,
