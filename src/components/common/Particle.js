@@ -14,7 +14,7 @@ function Particle() {
     }, []);
 
     const particlesLoaded = useCallback(async container => {
-        // await console.log(container); 
+        await console.log(container); 
     }, []);
 
     return (
@@ -33,7 +33,7 @@ function Particle() {
                         value: "#0f172a",
                     },
                 },
-                fpsLimit: 120,
+                fpsLimit: 30,
                 interactivity: {
                     events: {
                         // onClick: {
@@ -42,7 +42,7 @@ function Particle() {
                         // },
                         // onHover: {
                         //     enable: true,
-                        //     mode: "repulse",
+                        //     mode: "push",
                         // },
                         resize: true,
                     },
@@ -51,7 +51,7 @@ function Particle() {
                             quantity: 4,
                         },
                         repulse: {
-                            distance: 0,
+                            distance: 10,
                             duration: 0.4,
                         },
                     },
@@ -87,13 +87,13 @@ function Particle() {
                             enable: true,
                             area: 800,
                         },
-                        value: 80,
+                        value: 20,
                     },
                     opacity: {
                         value: 0.2,
                     },
                     size: {
-                        value: { min: 1, max: 6 },
+                        value: { min: 5, max: 6 },
                     },
                 },
                 detectRetina: true,

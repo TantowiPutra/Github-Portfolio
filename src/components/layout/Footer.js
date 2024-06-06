@@ -1,28 +1,19 @@
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import 'public/css/animation.css'
 import SocialMedia from '../common/SocialMedia'
+import SocmedData from '_data/SocmedData'
 
-const socmed_list = [
-    {
-        logo: faLinkedin,
-        url : "https://www.linkedin.com/in/tantowi-putra-agung-setiawan-620037251/"
-    },
 
-    {
-        logo: faGithub,
-        url : "https://github.com/TantowiPutra"
-    },
-];
 
 const Footer = ()  => {
     return (
-        <footer className='text-white block'>
+        <footer className='mt-10 text-white block'>
             <div className='text-center w-100 font-bold w-100'>
                 COPYRIGHT &copy;2024 TANTOWI PUTRA
             </div>
 
             <div className='flex flex-row justify-center'>
                 {
-                    socmed_list.map((item) => (
+                    SocmedData.map((item) => (
                         <SocialMedia
                             key={item.url}
                             logo={item.logo}

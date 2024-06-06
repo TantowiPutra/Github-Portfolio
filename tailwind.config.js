@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/*.{html,js,jsx,ts,tsx}",
@@ -7,8 +8,37 @@ module.exports = {
     "./public/*.{html,js,jsx,ts,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        'fade-down': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-20px) scale(0.95)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0px) scale(1)',
+          },
+        },
+        'fade-in-top': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-50px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      animation: {
+        'fade-down': 'fade-down 1s ease forwards',
+        'fade-in-top': 'fade-in-top 1s ease forwards',
+        'fade-in-top-2-sec': 'fade-in-top 1.5s ease 1s forwards',
+      },
+    },
   },
+  
   plugins: [
     require('tailwind-scrollbar'),
     function({addUtilities}) {

@@ -1,7 +1,7 @@
 const AboutMeData = [
     {
         id: 1,
-        text: "(14/05/2024) Hi, My name is <b>Tantowi Putra Agung Setiawan</b>, a recent Computer Science graduate from Bina Nusantara University. I finally (not officialy yet) got my Bachelor's degree in Computer Science after 3.5 years. As a freshmen, i found it really difficult to understand algorithmic ways of thinking as i don't have any prior knowledge of programming. Thankfully, i've got supportive friends whom motivated me alot to keep going and to enjoy the beauty of learning."
+        text: "(14/05/2024) Hi, My name is <b>Tantowi Putra Agung Setiawan</b>, a recent Computer Science graduate from Bina Nusantara University. I finally (not officialy yet) got my Bachelor's degree in Computer Science after 3.5 years. As a freshmen, i found it really difficult to understand algorithmic ways of thinking as i don't have any prior knowledge of programming. Thankfully, i've got supportive friends whom motivated me alot to keep going and to enjoy the beauty of learning process."
     },
 
     {
@@ -28,11 +28,6 @@ const AboutMeData = [
         id: 6,
         text: "At the end, I would like to express my heartfelt gratitude to my friends who have supported me through every hardship. Their encouragement and assistance have been invaluable, and I am deeply thankful for their unwavering friendship."
     }, 
-
-    {
-        id: 7,
-        text: "PS: I really am sorry if there are several grammar error that's bugging you. Tbh i'm still learning to communicate in english properly. So, please don't judge me &#128517;."
-    }
 ];
 
 export default AboutMeData;
