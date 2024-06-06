@@ -8,8 +8,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+const actNavbarData = NavbarData.filter((item) => (
+  item.isActive ? item : ''
+))
+
 export default function Navbar() {
-  const [navList, setList] = useState(NavbarData);
+  const [navList, setList] = useState(actNavbarData);
 
   function checkNavigation(event) {
     const currentHref = event.currentTarget.getAttribute('href');

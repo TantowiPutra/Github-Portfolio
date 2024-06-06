@@ -12,3 +12,6 @@ Static Portfolio Website
 1. React Hooks (useState, useRef)
 2. React memo
 3. React Router
+
+#  Things to Fix
+1. react-helmet package deprecation, need to update to react-helmet-async
