@@ -13,7 +13,6 @@ const NavbarData = [
         name: 'About Me',   
         icon:<FontAwesomeIcon icon={faUser}/>, 
         href: '/about-me', 
-        current: true,
         section: <AboutMe />
     },
     { 
@@ -22,7 +21,6 @@ const NavbarData = [
         name: 'Projects',   
         icon:<FontAwesomeIcon icon={faCoffee}/>, 
         href: '/projects', 
-        current: false,
         section: <Projects />
     },
     { 
@@ -31,7 +29,6 @@ const NavbarData = [
         name: 'Tech Stack', 
         icon:<FontAwesomeIcon icon={faGear}/>, 
         href: '/tech-stack', 
-        current: false,
         section: <TechStack />
     },
     { 
@@ -40,7 +37,6 @@ const NavbarData = [
         name: 'Certification', 
         icon:<FontAwesomeIcon icon={faCertificate}/>, 
         href: '/certification', 
-        current: false,
         section: <Certifications />
     },
     { 
@@ -50,7 +46,6 @@ const NavbarData = [
         icon:<FontAwesomeIcon 
         icon={faMobile}/>, 
         href: '/contact-me', 
-        current: false,
         section: <ContactMe />
     },
 ]

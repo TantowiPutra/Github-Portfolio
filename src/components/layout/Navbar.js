@@ -12,8 +12,8 @@ const actNavbarData = NavbarData.filter((item) => (
   item.isActive ? item : ''
 ))
 
-export default function Navbar() {
-  const [navList, setList] = useState(actNavbarData);
+export default function Navbar({ currHref }) {
+  const [navList, setNavList] = useState(actNavbarData);
 
   function checkNavigation(event) {
     const currentHref = event.currentTarget.getAttribute('href');
@@ -25,7 +25,7 @@ export default function Navbar() {
       };
     });
 
-    setList(newNavList)
+    setNavList(newNavList)
   } 
 
 
@@ -66,7 +66,7 @@ export default function Navbar() {
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          item.current ? 'bg-slate-700 text-white' : 'text-gray-300 hover:bg-slate-800 hover:text-white', 'p-2 rounded-md px-3 sm:text-xs lg:text-base font-medium'
+                          item.href == currHref ? 'bg-slate-700 text-white' : 'text-gray-300 hover:bg-slate-800 hover:text-white', 'p-2 rounded-md px-3 sm:text-xs lg:text-base font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >

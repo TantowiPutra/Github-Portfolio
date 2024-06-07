@@ -4,7 +4,7 @@ import Copyright from 'components/common/reusable/Copyright'
 
 const Footer = ()  => {
     return (
-        <footer className='mt-10 text-white block'>
+        <footer className='w-[100%] text-white block mt-[30px]'>
             <Copyright />
             <SocialMedia />
         </footer>

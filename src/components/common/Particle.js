@@ -87,13 +87,13 @@ function Particle() {
                             enable: true,
                             area: 800,
                         },
-                        value: 20,
+                        value: 50,
                     },
                     opacity: {
                         value: 0.2,
                     },
                     size: {
-                        value: { min: 5, max: 6 },
+                        value: { min: 1, max: 6 },
                     },
                 },
                 detectRetina: true,
