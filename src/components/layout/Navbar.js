@@ -4,6 +4,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import NavbarData from '_data/NavbarData'
 import { Link } from 'react-router-dom';
 
+import Brand from 'components/common/reusable/Brand';
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -30,9 +32,9 @@ export default function Navbar({ currHref }) {
 
 
   return (
-    <Disclosure as="nav" className="w-3/4">
+    <Disclosure as="nav" className="w-content">
       {({ open }) => (
-        <span>
+        <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center lg:hidden block">
@@ -49,12 +51,7 @@ export default function Navbar({ currHref }) {
               </div>
 
               <div className="absolute inset-y-0 right-3 flex items-center lg:hidden block">
-                <span>
-                  <i className='text-3xl font-extraboldtext-3xl font-extrabold'>
-                    <span className='text-red-700'>T</span>
-                    <span className='text-gray-50'>P</span>
-                  </i>
-                </span>
+                <Brand />
               </div>
 
               <div className="flex flex-1 items-center justify-center sm:items-stretch">
@@ -66,7 +63,7 @@ export default function Navbar({ currHref }) {
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          item.href == currHref ? 'bg-slate-700 text-white' : 'text-gray-300 hover:bg-slate-800 hover:text-white', 'p-2 rounded-md px-3 sm:text-xs lg:text-base font-medium'
+                          item.href === currHref ? 'bg-slate-700 text-white' : 'text-gray-300 hover:bg-slate-800 hover:text-white', 'p-2 rounded-md px-3 sm:text-xs lg:text-base font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -94,7 +91,7 @@ export default function Navbar({ currHref }) {
                     <DisclosureButton
                       key={item.name}
                       className={classNames(
-                        item.current ? 'bg-slate-700 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        item.href === currHref ? 'bg-slate-700 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                         'w-full rounded-md text-base font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}
@@ -113,7 +110,7 @@ export default function Navbar({ currHref }) {
                 </div>
             </DisclosurePanel>
           </Transition>
-        </span>
+        </>
       )}
     </Disclosure>
   )

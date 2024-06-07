@@ -1,13 +1,21 @@
+import Heading from 'components/layout/Heading';
 import Navbar from 'components/layout/Navbar.js'
 import Footer from 'components/layout/Footer.js'
 
 const Content = ({ href, section }) => {
     return (
-        <div id='content' name='content' className="h-3/4 w-full flex flex-col items-center">
-            <Navbar currHref={href}/>
-            { section }
+        <>
+            <header className='w-full'>
+                <Heading />
+                <Navbar currHref={href}/>
+            </header>
+
+            <main className='container mx-auto'>
+                { section }
+            </main>
+            
             <Footer />
-        </div>
+        </>
     )
 }
 

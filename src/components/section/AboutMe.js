@@ -3,7 +3,7 @@ import { Cursor, useTypewriter} from 'react-simple-typewriter'
 
 import SectionWrapper from 'components/layout/SectionWrapper'
 
-import Heading from 'components/common/reusable/Heading'
+import Header from 'components/common/reusable/Header'
 import Container from 'components/common/reusable/Container'
 import Paragprah from 'components/common/reusable/Paragraph'
 
@@ -27,7 +27,7 @@ const AboutMe = () => {
                 <title>About Me | Tantowi Putra</title>
             </Helmet>
 
-            <Heading>
+            <Header>
                 I'm a&nbsp;
                     <span style={{ color: "#D84D4D" }}>
                         {text}
@@ -35,7 +35,7 @@ const AboutMe = () => {
                     <span>
                         <Cursor/>
                     </span>
-            </Heading>
+            </Header>
 
             
             <SectionWrapper>

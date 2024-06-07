@@ -1,4 +1,4 @@
-import Heading from "components/common/reusable/Heading"
+import Header from "components/common/reusable/Header"
 import Container from "components/common/reusable/Container"
 
 import { Helmet } from "react-helmet"
@@ -10,9 +10,9 @@ const Certifications = () => {
                 <title>Certifications | Tantowi Putra</title>
             </Helmet>
 
-            <Heading>
+            <Header>
                 My Certifications
-            </Heading>
+            </Header>
 
         </Container>
     )    
