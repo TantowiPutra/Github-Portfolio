@@ -52,23 +52,27 @@ const Projects = () => {
         setTechFilter([])
     }
 
+    // Load Project Data at the End of Process
     useEffect(() => {
        let filtered = ProjectsData;
 
        if(!!techFilter.length) {
-            filtered = ProjectsData.filter(({ techStack }) => {
-                const set = new Set(techStack)
+            filtered = filtered.filter(({ techStack }) => {
+                techStack = techStack.map((item) => (
+                    item.toLowerCase()
+                ))
+
+                const set_tech_stack = new Set(techStack)
 
                 return (
                     techFilter.every((item) => (
-                        set.has(item)
+                        set_tech_stack.has(item.toLowerCase())
                     ))
                 )
             })
         }
 
         setFilteredProject(filtered)
-
     }, [techFilter])
 
     const ProjectEntry = filteredProject.map(({id, imgPath, title, description, techStack}) => (
@@ -105,11 +109,11 @@ const Projects = () => {
                 </span>
             </Header>
 
-            <SectionWrapper>
-                <div className="font-mono mb-5 space-x-4 space-y-2 text-xs"> 
-                    Filter: {filterEntry}
-                </div> 
+            <div className="font-mono space-x-4 space-y-2 text-xs px-5 pt-3"> 
+                Filter: {filterEntry}
+            </div>
 
+            <SectionWrapper>
                 {/* Project Found */}
                 {
                     !!ProjectEntry.length && 

@@ -20,6 +20,7 @@ module.exports = {
             transform: 'translateY(0px) scale(1)',
           },
         },
+
         'fade-in-top': {
           '0%': {
             opacity: '0',
@@ -30,11 +31,23 @@ module.exports = {
             transform: 'translateY(0)',
           },
         },
+
+        'zoom-in': {
+          '0%': {
+            transform: 'scale(0.5)',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'scale(1)',
+            opacity: '1',
+          }
+        }
       },
       animation: {
         'fade-down': 'fade-down 1s ease forwards',
         'fade-in-top': 'fade-in-top 1s ease forwards',
         'fade-in-top-2-sec': 'fade-in-top 1.5s ease 1s forwards',
+        'zoom-in': 'zoom-in 1s ease-in-out forwards',
       },
     },
   },

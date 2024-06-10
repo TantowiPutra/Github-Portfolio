@@ -1,67 +1,97 @@
 const Tech = [
     {
-        id: 1,
+        id: "L1",
         tech: "HTML",
     },
 
     {
-        id: 2,
+        id: "L2",
         tech: "CSS",
     },
 
     {
-        id: 3,
+        id: "L3",
         tech: "JavaScript",
     },
 
     {
-        id: 4,
-        tech: "Python",
+        id: "L4",
+        tech: "PHP",
     },
 
     {
-        id: 5,
-        tech: "Figma",
-    },
-
-    {
-        id: 6,
+        id: "L5",
         tech: "Java",
     },
 
     {
-        id: 7,
-        tech: "Pytorch",
+        id: "L6",
+        tech: "Go",
     },
 
     {
-        id: 8,
-        tech: "Adobe Photopshop",
+        id: "L7",
+        tech: "C++",
     },
 
     {
-        id: 9,
-        tech: "Adobe Animate",
+        id: "L8",
+        tech: "C",
     },
 
     {
-        id: 10,
-        tech: "Adobe Illustrator",
+        id: "L9",
+        tech: "C#",
     },
 
     {
-        id: 11,
-        tech: "Kotlin",
+        id: "L10",
+        tech: "Python",
     },
 
     {
-        id: 12,
+        id: "F1",
         tech: "Laravel",
     },
 
     {
-        id: 13,
-        tech: "PHP",
+        id: "F2",
+        tech: "Bootstrap",
+    },
+
+    {
+        id: "F3",
+        tech: "Tailwind",
+    },
+
+    {
+        id: "F4",
+        tech: "React",
+    },
+
+    {
+        id: "F5",
+        tech: "jQuery",
+    },
+
+    {
+        id: "T1",
+        tech: "Figma",
+    },
+
+    {
+        id: "T2",
+        tech: "Adobe Animate",
+    },
+
+    {
+        id: "T3",
+        tech: "Adobe Illustrator",
+    },
+
+    {
+        id: "T4",
+        tech: "Adobe Photoshop",
     },
 ];
 
