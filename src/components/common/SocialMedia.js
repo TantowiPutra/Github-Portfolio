@@ -1,4 +1,4 @@
-import SocmedData from '_data/SocmedData'
+import SocmedData from '_data/Socmed'
 import SocialMediaWrapper from './SocialMediaWrapper'
 
 const SocialMedia = () => {

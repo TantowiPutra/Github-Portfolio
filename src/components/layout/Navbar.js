@@ -1,14 +1,12 @@
 import { useState } from 'react';
 import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import NavbarData from '_data/NavbarData'
+import NavbarData from '_data/Navbar'
 import { Link } from 'react-router-dom';
 
-import Brand from 'components/common/reusable/Brand';
+import classNames from 'utils/classNames.';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import Brand from 'components/common/reusable/Brand';
 
 const actNavbarData = NavbarData.filter((item) => (
   item.isActive ? item : ''

@@ -1,5 +1,5 @@
 import { Routes, Route} from 'react-router-dom';
-import NavbarData from '_data/NavbarData';
+import NavbarData from '_data/Navbar';
 import Content from 'components/layout/Content.js';
 
 const routes = () => {

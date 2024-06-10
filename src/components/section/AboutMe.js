@@ -7,7 +7,7 @@ import Header from 'components/common/reusable/Header'
 import Container from 'components/common/reusable/Container'
 import Paragprah from 'components/common/reusable/Paragraph'
 
-import AboutMeData from '_data/AboutMeData'
+import AboutMeData from '_data/AboutMe'
 
 const AboutMe = () => {
     const [text] = useTypewriter({
