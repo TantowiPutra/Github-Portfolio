@@ -110,8 +110,7 @@ const Projects = () => {
             </Header>
 
             <SectionWrapper>
-                
-                <div className="font-mono space-x-2 text-xs pt-3 flex flex-row items-center overflow-auto scrollbar-thin scrollbar-webkit p-2">
+                <div className="font-mono space-x-2 text-xs pt-1 flex flex-row items-center overflow-auto scrollbar-thin scrollbar-webkit p-2">
                     <span>Filter(s): </span>
                     {filterEntry}
                 </div>
