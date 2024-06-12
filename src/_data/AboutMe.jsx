@@ -1,7 +1,7 @@
 const AboutMeData = [
     {
         id: 1,
-        text: "(14/05/2024) Hi, My name is <b>Tantowi Putra Agung Setiawan</b>, a recent Computer Science graduate from Bina Nusantara University. I finally (not officialy yet) got my Bachelor's degree in Computer Science after 3.5 years. As a freshmen, i found it really difficult to understand algorithmic ways of thinking as i don't have any prior knowledge of programming. Thankfully, i've got supportive friends whom motivated me alot to keep going and to enjoy the beauty of learning process."
+        text: <span>(14/05/2024) Hi, My name is <b>Tantowi Putra Agung Setiawan</b>, a recent Computer Science graduate from Bina Nusantara University. I finally (not officialy yet) got my Bachelor's degree in Computer Science after 3.5 years. As a freshmen, i found it really difficult to understand algorithmic ways of thinking as i don't have any prior knowledge of programming. Thankfully, i've got supportive friends whom motivated me alot to keep going and to enjoy the beauty of learning process.</span>
     },
 
     {

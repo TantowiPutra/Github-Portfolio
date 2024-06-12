@@ -67,7 +67,7 @@ function Particle() {
                         distance: 150,
                         enable: true,
                         opacity: 0.1,
-                        width: 1,
+                        width: 3,
                     },
                     shape: {
                         type: ['circle'],
@@ -86,9 +86,9 @@ function Particle() {
                     number: {
                         density: {
                             enable: true,
-                            area: 800,
+                            area: 300,
                         },
-                        value: 50,
+                        value: 25,
                     },
                     opacity: {
                         value: 0.2,

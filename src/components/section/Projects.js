@@ -25,7 +25,7 @@ const Projects = () => {
 
     const [text] = useTypewriter({
         words: ['Archives of My Projects'],
-        loop: {},
+        loop:{}
     })
 
     const [filteredProject, setFilteredProject] = useState([]);
@@ -109,9 +109,11 @@ const Projects = () => {
                 </span>
             </Header>
 
-            <div className="font-mono space-x-4 space-y-2 text-xs px-5 pt-3"> 
-                Filter: {filterEntry}
-            </div>
+            <SectionWrapper>
+                <div className="font-mono space-x-4 space-y-2 text-xs pt-3"> 
+                    Filter: {filterEntry}
+                </div>
+            </SectionWrapper>
 
             <SectionWrapper>
                 {/* Project Found */}

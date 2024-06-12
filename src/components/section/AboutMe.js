@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { Cursor, useTypewriter} from 'react-simple-typewriter'
 
@@ -8,8 +9,20 @@ import Container from 'components/common/reusable/Container'
 import Paragprah from 'components/common/reusable/Paragraph'
 
 import AboutMeData from '_data/AboutMe'
+import Skeleton from 'react-loading-skeleton'
+import "react-loading-skeleton/dist/skeleton.css";
 
 const AboutMe = () => {
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false)
+        }, 125)
+
+        return () => clearTimeout(timer)
+    })
+
     const [text] = useTypewriter({
         words: ['DEVELOPER', 'GAMER', 'STUDENT'],
         loop: {},
@@ -17,9 +30,9 @@ const AboutMe = () => {
 
     const aboutMeEntry = AboutMeData.map((data) => (
         <Paragprah key={data.id}> 
-            {data.text}
+            {isLoading ? <Skeleton count={5}/> : data.text}
         </Paragprah>
-    ))
+    ));    
 
     return (
         <Container>

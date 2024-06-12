@@ -6,11 +6,8 @@ const SectionWrapper = ({ children }) => {
         //         children
         //     }
         // </div>
-
-        <div className="mt-4 w-full max-h-[800px] overflow-y-auto p-5 scrollbar-thin scrollbar-webkit">
-            {
-                children
-            }
+        <div className="container mt-4 w-content max-h-[800px] overflow-y-auto p-5 scrollbar-thin scrollbar-webkit">
+            {children}
         </div>
     )
 }
