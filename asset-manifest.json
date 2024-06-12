@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/Github-Portfolio/static/css/main.f03a771e.css",
-    "main.js": "/Github-Portfolio/static/js/main.b659fa88.js",
+    "main.css": "/Github-Portfolio/static/css/main.4a72f92f.css",
+    "main.js": "/Github-Portfolio/static/js/main.3cc4cfa5.js",
     "static/js/206.83f2bd31.chunk.js": "/Github-Portfolio/static/js/206.83f2bd31.chunk.js",
     "index.html": "/Github-Portfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.f03a771e.css",
-    "static/js/main.b659fa88.js"
+    "static/css/main.4a72f92f.css",
+    "static/js/main.3cc4cfa5.js"
   ]
 }
