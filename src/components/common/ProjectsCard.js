@@ -11,7 +11,7 @@ const ProjectsCard = ({ imgPath, title, description, techStack}) => {
 
     return (
         <div className="h-content w-full rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl border-2 p-2 relative flex flex-col overflow-hidden fade-down">
-            <ImageContainer imgPath={imgPath} classes={"h-[250px] p-2 rounded w-full"} backgroundSize={"cover"}/>
+            <ImageContainer imgPath={imgPath} classes={"lg:h-[250px] sm:h-[500px] h-[550px] p-2 rounded w-full"} backgroundSize={"100% 100%"}/>
             <div className="w-full h-full px-6 py-4 flex flex-col overflow-hidden">
                 <div className="font-bold xl:text-xl lg:text-lg text-base mb-2 overflow-auto">{title}</div>
                 <p className="xl:text-base lg:text-md text-sm text-white overflow-auto font-mono">

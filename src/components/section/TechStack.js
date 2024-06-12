@@ -44,7 +44,7 @@ const TechStack = () => {
                 <ImageContainer 
                     key={id} 
                     imgPath={imgPath} 
-                    classes="h-[80px] w-[80px]"
+                    classes="lg:h-[70px] lg:w-[70px] h-[60px] w-[60px]"
                     backgroundSize="contain"
                 /> 
             )
@@ -83,7 +83,6 @@ const TechStack = () => {
                     !techEntry.length && 
                     <div className="xl:text-xl md:text-lg text-base w-100 text-center mb-2 font-mono">
                         <p className='mb-3'>Tech(s) not found... </p>
-                        <button className='underline text-cyan-600 cursor-pointer'>Clear Filter</button>
                     </div>
                 }
             </SectionWrapper>

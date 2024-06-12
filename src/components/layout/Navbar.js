@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import NavbarData from '_data/Navbar';
@@ -12,6 +12,7 @@ import Brand from 'components/common/reusable/Brand';
 export default function Navbar({ currHref }) {
   const actNavbarData = NavbarData.filter((item) => item.isActive);
 
+  const disclosureButtonRef = useRef(null);
   const [navList, setNavList] = useState(actNavbarData);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({});
@@ -44,6 +45,12 @@ export default function Navbar({ currHref }) {
           onClick={(e) => {
             isRoute ? checkNavigation(e) : 
                       openModal({ title: title, warning: warning, btnText: btnText, href: href })
+
+            console.log(disclosureButtonRef)
+
+            if (disclosureButtonRef.current) {
+              disclosureButtonRef.current.click();
+            }
           }}
           to={isRoute ? href : '#'}
         >
@@ -59,6 +66,7 @@ export default function Navbar({ currHref }) {
         isRoute ? checkNavigation(e) : 
                   openModal({ title: title, warning: warning, btnText: btnText, href: href })
       }}
+
       key={name}
       to={isRoute ? href : '#'}
       className={classNames(
@@ -89,7 +97,9 @@ export default function Navbar({ currHref }) {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center lg:hidden block">
                 {/* Mobile menu button */}
-                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <DisclosureButton
+                  ref={disclosureButtonRef}
+                  className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
