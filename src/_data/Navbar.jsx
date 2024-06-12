@@ -45,7 +45,7 @@ const NavbarData = [
     },
     { 
         id: 4,
-        isActive: true,
+        isActive: false,
         isRoute: true,
         name: 'Certification', 
         icon:<FontAwesomeIcon icon={faCertificate}/>, 

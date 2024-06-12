@@ -40,8 +40,11 @@ export default function Navbar({ currHref }) {
     >
       <span className='flex flex-row items-center w-content h-content'>
         <Link
-          className='w-full py-2'
-          onClick={(e) => isRoute ? checkNavigation(e) : openModal({ title: title, warning: warning, btnText: btnText, href: href })}
+          className='w-full py-2 md:text-base text-sm'
+          onClick={(e) => {
+            isRoute ? checkNavigation(e) : 
+                      openModal({ title: title, warning: warning, btnText: btnText, href: href })
+          }}
           to={isRoute ? href : '#'}
         >
           {name}
@@ -52,7 +55,10 @@ export default function Navbar({ currHref }) {
 
   const navbarEntry = navList.map(({ isRoute, name, href, current, icon, title, warning, btnText }) => (
     <Link
-      onClick={(e) => isRoute ? checkNavigation(e) : openModal({ title: title, warning: warning, btnText: btnText, href: href })}
+      onClick={(e) => {
+        isRoute ? checkNavigation(e) : 
+                  openModal({ title: title, warning: warning, btnText: btnText, href: href })
+      }}
       key={name}
       to={isRoute ? href : '#'}
       className={classNames(
