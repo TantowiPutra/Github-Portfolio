@@ -10,7 +10,7 @@ const ImageContainer = ({ imgPath, classes, backgroundSize, isLoading, width, he
     };
 
     return (
-        <div className={classNames("p-2 mx-auto aspect-square", classes)} style={bannerStyling}>
+        <div className={classNames("p-2 mx-auto", classes)} style={bannerStyling}>
             { isLoading ? <Skeleton width={width} height={height} /> : ''}
         </div>
     );

@@ -49,6 +49,9 @@ module.exports = {
         'fade-in-top-2-sec': 'fade-in-top 1.5s ease 1s forwards',
         'zoom-in': 'zoom-in 1s ease-in-out forwards',
       },
+      aspectRatio: {
+        '16/22': '16 / 22',
+      },
     },
   },
   

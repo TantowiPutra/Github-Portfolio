@@ -44,7 +44,7 @@ const TechStack = () => {
                 <ImageContainer 
                     key={id} 
                     imgPath={imgPath} 
-                    classes="lg:h-[70px] lg:w-[70px] h-[60px] w-[60px]"
+                    classes="w-full aspect-video"
                     backgroundSize="contain"
                 /> 
             )
@@ -71,7 +71,7 @@ const TechStack = () => {
                 {
                     !!techEntry.length && (
                         <span>
-                            <div className="grid lg:grid-cols-8 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 w-full gap-y-3">
+                            <div className="grid lg:grid-cols-8 md:grid-cols-5 grid-cols-4 w-full gap-y-3 mt-5">
                                 {techEntry}
                             </div>
                         </span>
@@ -81,7 +81,7 @@ const TechStack = () => {
                 {/* Tech Not Found */}
                 {
                     !techEntry.length && 
-                    <div className="xl:text-xl md:text-lg text-base w-100 text-center mb-2 font-mono">
+                    <div className="xl:text-xl md:text-lg text-base w-100 text-center mb-2 font-mono mt-5">
                         <p className='mb-3'>Tech(s) not found... </p>
                     </div>
                 }
