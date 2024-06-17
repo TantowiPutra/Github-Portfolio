@@ -8,7 +8,6 @@ import SectionWrapper from "components/layout/SectionWrapper"
 import TechData from "_data/Techs"
 import ImageContainer from "components/common/reusable/ImageContainer"
 
-import classNames from "utils/classNames"
 import { Helmet } from "react-helmet"
 
 import { Cursor, useTypewriter } from "react-simple-typewriter"
