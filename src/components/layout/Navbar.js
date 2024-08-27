@@ -12,7 +12,7 @@ import Brand from 'components/common/reusable/Brand';
 export default function Navbar({ currHref }) {
   const actNavbarData = NavbarData.filter((item) => item.isActive);
 
-  const disclosureButtonRef = useRef(null);
+  const disclosureButtonRef = useRef(null); 
   const [navList, setNavList] = useState(actNavbarData);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({});
@@ -45,8 +45,6 @@ export default function Navbar({ currHref }) {
           onClick={(e) => {
             isRoute ? checkNavigation(e) : 
                       openModal({ title: title, warning: warning, btnText: btnText, href: href })
-
-            console.log(disclosureButtonRef)
 
             if (disclosureButtonRef.current) {
               disclosureButtonRef.current.click();

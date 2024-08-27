@@ -43,8 +43,10 @@ const TechStack = () => {
                 <ImageContainer 
                     key={id} 
                     imgPath={imgPath} 
-                    classes="w-full aspect-video"
+                    classes="w-full"
                     backgroundSize="contain"
+                    isBgHidden="true"
+                    width="80px"
                 /> 
             )
         ) : ''
