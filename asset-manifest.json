@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Github-Portfolio/static/css/main.3ff78f13.css",
-    "main.js": "/Github-Portfolio/static/js/main.16877bfb.js",
+    "main.js": "/Github-Portfolio/static/js/main.52f4c291.js",
     "static/js/206.83f2bd31.chunk.js": "/Github-Portfolio/static/js/206.83f2bd31.chunk.js",
     "static/media/animated-ui-ux-online-shop.png": "/Github-Portfolio/static/media/animated-ui-ux-online-shop.7ee87376321a68be053c.png",
     "static/media/chinese-flower-tea-cnn.png": "/Github-Portfolio/static/media/chinese-flower-tea-cnn.fbb01167d49543fa6ad9.png",
@@ -14,6 +14,6 @@
   },
   "entrypoints": [
     "static/css/main.3ff78f13.css",
-    "static/js/main.16877bfb.js"
+    "static/js/main.52f4c291.js"
   ]
 }
